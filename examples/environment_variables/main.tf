@@ -3,7 +3,8 @@
 
 module "stack_env_var" {
   source           = "../../"
-  stack_repository = "simple-env-var"
+  stack_repository = "mervinhemaraju"
+  stack_name       = "mervinhemaraju_env_var"
   description      = "A simple test stack"
 
   environment_variables = {

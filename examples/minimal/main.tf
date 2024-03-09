@@ -3,6 +3,6 @@
 
 module "stack_simple" {
   source           = "../../"
-  stack_repository = "simple-test"
+  stack_repository = "mervinhemaraju"
   description      = "A simple test stack"
 }
