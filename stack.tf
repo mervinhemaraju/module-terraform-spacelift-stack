@@ -15,6 +15,8 @@ resource "spacelift_stack" "this" {
   autodeploy     = var.autodeploy
   autoretry      = var.autoretry
 
+  project_root = var.project_root
+
   runner_image = var.runner_image
 
   terraform_smart_sanitization    = var.terraform_smart_sanitization
