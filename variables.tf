@@ -15,6 +15,12 @@ variable "branch" {
   default     = "main"
 }
 
+variable "context_ids" {
+  type        = list(string)
+  description = "The context ids to attach to the stack"
+  default     = []
+}
+
 variable "project_root" {
   type        = string
   description = "The project root folder path"
