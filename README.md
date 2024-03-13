@@ -41,6 +41,7 @@ No modules.
 | <a name="input_environment_variables"></a> [environment\_variables](#input\_environment\_variables) | The environment variables to set | `map(string)` | `{}` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | The labels to apply to the stack | `list(string)` | `[]` | no |
 | <a name="input_manage_state"></a> [manage\_state](#input\_manage\_state) | Whether to manage state | `bool` | `true` | no |
+| <a name="input_project_root"></a> [project\_root](#input\_project\_root) | The project root folder path | `string` | `null` | no |
 | <a name="input_runner_image"></a> [runner\_image](#input\_runner\_image) | The runner image to use | `string` | `"ghcr.io/mervinhemaraju/spacelift-runner-image:prod"` | no |
 | <a name="input_stack_name"></a> [stack\_name](#input\_stack\_name) | The name of the spacelift stack | `string` | `null` | no |
 | <a name="input_stack_repository"></a> [stack\_repository](#input\_stack\_repository) | The repository to deploy | `string` | n/a | yes |

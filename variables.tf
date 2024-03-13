@@ -15,6 +15,12 @@ variable "branch" {
   default     = "main"
 }
 
+variable "project_root" {
+  type        = string
+  description = "The project root folder path"
+  default     = null
+}
+
 variable "stack_name" {
   type        = string
   description = "The name of the spacelift stack"
