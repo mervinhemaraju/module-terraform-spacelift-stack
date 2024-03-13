@@ -9,8 +9,6 @@ resource "spacelift_stack" "this" {
 
   repository = var.stack_repository
 
-  context_ids = var.context_ids
-
   terraform_version = var.terraform_version
 
   administrative = var.administrative
