@@ -26,19 +26,3 @@ resource "spacelift_stack" "this" {
 
   labels = var.labels
 }
-
-resource "spacelift_environment_variable" "this" {
-  for_each   = var.environment_variables
-  name       = each.key
-  value      = each.value
-  write_only = true
-  stack_id   = spacelift_stack.this.id
-}
-
-resource "spacelift_aws_integration_attachment" "this" {
-  count          = var.aws_integration_id == null ? 0 : 1
-  integration_id = var.aws_integration_id
-  stack_id       = spacelift_stack.this.id
-  read           = true
-  write          = true
-}
