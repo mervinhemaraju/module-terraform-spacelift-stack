@@ -16,7 +16,7 @@ module "stack_1" {
 
 module "stack_2" {
   source           = "../../"
-  stack_repository = "mervinhemaraju"
+  stack_repository = "portfolio"
   stack_name       = "test_stack_2"
   description      = "A simple test stack"
 
