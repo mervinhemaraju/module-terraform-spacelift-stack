@@ -3,7 +3,7 @@ variable "depends_on_stacks" {
   type        = list(any)
   default = [
     {
-      depends_on_stack_id = module.stack_1.stack_id
+      depends_on_stack_id = "id"
       references = [
         {
           output_name = "test1",
