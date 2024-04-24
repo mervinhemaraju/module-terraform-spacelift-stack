@@ -104,3 +104,27 @@ variable "aws_integration_id" {
   description = "The id of the aws integration"
   default     = null
 }
+
+variable "azure_integration_id" {
+  type        = string
+  description = "The id of the azure integration"
+  default     = null
+}
+
+variable "azure_subscription_id" {
+  type        = string
+  description = "The id of the azure subscription"
+  default     = null
+}
+
+variable "depends_on_stacks" {
+  description = "List of maps containing stack dependencies and references"
+  type = list(object({
+    depends_on_stack_id = string
+    references = list(object({
+      output_name = string
+      input_name  = string
+    }))
+  }))
+  default = []
+}
