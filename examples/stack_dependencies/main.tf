@@ -22,7 +22,7 @@ module "stack_2" {
 
   depends_on_stacks = [
     {
-      depends_on_stack_id = module.stack_1.id
+      depends_on_stack_id = module.stack_1.stack_id
       references = [
         {
           output_name = "test1",
