@@ -119,12 +119,6 @@ variable "azure_subscription_id" {
 
 variable "depends_on_stacks" {
   description = "List of maps containing stack dependencies and references"
-  type = list(object({
-    depends_on_stack_id = string
-    references = list(object({
-      output_name = string
-      input_name  = string
-    }))
-  }))
-  default = []
+  type        = list(any)
+  default     = []
 }
