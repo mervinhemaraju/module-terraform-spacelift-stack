@@ -1,5 +1,6 @@
 
 
+
 resource "spacelift_context" "one" {
   description = "test1"
   name        = "test1"
