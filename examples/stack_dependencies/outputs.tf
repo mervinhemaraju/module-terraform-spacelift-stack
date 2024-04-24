@@ -1,5 +1,5 @@
 output "sd" {
-  value = { for index, stack in var.depends_on_stacks : stack.depends_on_stack_id => stack }
+  value = { for stack in var.depends_on_stacks : stack.depends_on_stack_id => stack }
 }
 
 # output "sdr" {
