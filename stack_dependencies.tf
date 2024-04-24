@@ -21,12 +21,12 @@
 #   input_name          = each.value.input_name
 # }
 
-resource "spacelift_stack_dependency" "this" {
-  for_each = { for index, stack in var.depends_on_stacks : stack.depends_on_stack_id => stack }
+# resource "spacelift_stack_dependency" "this" {
+#   for_each = { for index, stack in var.depends_on_stacks : stack.depends_on_stack_id => stack }
 
-  stack_id            = spacelift_stack.this.id
-  depends_on_stack_id = each.key
-}
+#   stack_id            = spacelift_stack.this.id
+#   depends_on_stack_id = each.key
+# }
 
 # resource "spacelift_stack_dependency_reference" "this" {
 #   for_each = { for stack_id, stack in spacelift_stack_dependency.this : stack_id => stack.references }
