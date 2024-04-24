@@ -104,3 +104,15 @@ variable "aws_integration_id" {
   description = "The id of the aws integration"
   default     = null
 }
+
+variable "azure_integration_id" {
+  type        = string
+  description = "The id of the azure integration"
+  default     = null
+}
+
+variable "azure_subscription_id" {
+  type        = string
+  description = "The id of the azure subscription"
+  default     = null
+}
