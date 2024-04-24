@@ -4,7 +4,7 @@
 module "stack_1" {
   source           = "../../"
   stack_repository = "mervinhemaraju"
-  stack_name       = "test_stack_1"
+  stack_name       = "stackone"
   description      = "A simple test stack"
 
   environment_variables = {
@@ -17,7 +17,7 @@ module "stack_1" {
 module "stack_2" {
   source           = "../../"
   stack_repository = "portfolio"
-  stack_name       = "test_stack_2"
+  stack_name       = "stacktwo"
   description      = "A simple test stack"
 
   depends_on_stacks = [
