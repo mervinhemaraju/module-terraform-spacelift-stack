@@ -22,10 +22,10 @@
 # }
 
 resource "spacelift_stack_dependency" "this" {
-  for_each = { for stack in var.depends_on_stacks : stack.depends_on_stack_id => stack }
+  for_each = { for index, stack in var.depends_on_stacks : stack.depends_on_stack_id => stack }
 
   stack_id            = spacelift_stack.this.id
-  depends_on_stack_id = each.value.depends_on_stack_id
+  depends_on_stack_id = each.key
 }
 
 resource "spacelift_stack_dependency_reference" "this" {
