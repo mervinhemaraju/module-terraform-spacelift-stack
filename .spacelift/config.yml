@@ -13,6 +13,3 @@ tests:
   - name: Test with context attachments
     terraform_version: 1.4.6
     project_root: "examples/environment_variables"
-  - name: Test with stack dependencies
-    terraform_version: 1.4.6
-    project_root: "examples/stack_dependencies"

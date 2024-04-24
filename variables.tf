@@ -116,9 +116,3 @@ variable "azure_subscription_id" {
   description = "The id of the azure subscription"
   default     = null
 }
-
-variable "depends_on_stacks" {
-  description = "List of maps containing stack dependencies and references"
-  type        = list(any)
-  default     = []
-}
