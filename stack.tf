@@ -1,4 +1,3 @@
-
 resource "spacelift_stack" "this" {
 
   name        = var.stack_name == null ? var.stack_repository : var.stack_name
@@ -21,6 +20,8 @@ resource "spacelift_stack" "this" {
 
   terraform_smart_sanitization    = var.terraform_smart_sanitization
   terraform_external_state_access = var.terraform_external_state_access
+  terraform_workflow_tool         = var.terraform_workflow_tool
+  terraform_workspace             = var.terraform_workspace
 
   manage_state = var.manage_state
 
