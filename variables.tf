@@ -129,3 +129,19 @@ variable "terraform_workspace" {
   default     = "production"
 
 }
+
+variable "stack_dependencies" {
+  description = "A map of stack dependencies where the key is the dependency name and the value is the stack ID it depends on."
+  type        = map(string)
+  default     = {}
+}
+
+variable "dependency_references" {
+  description = "A list of dependency references, each specifying the stack dependency ID, output name, and input name."
+  type = list(object({
+    stack_dependency_id = string
+    output_name         = string
+    input_name          = string
+  }))
+  default = []
+}
