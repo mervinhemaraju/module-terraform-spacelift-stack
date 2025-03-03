@@ -130,18 +130,21 @@ variable "terraform_workspace" {
 
 }
 
-variable "stack_dependencies" {
-  description = "A map of stack dependencies where the key is the dependency name and the value is the stack ID it depends on."
-  type        = map(string)
-  default     = {}
+# Add these variables to your module's variables.tf file
+variable "dependencies" {
+  description = "List of stack dependencies"
+  type = list(object({
+    depends_on_stack_id = string
+  }))
+  default = []
 }
 
 variable "dependency_references" {
-  description = "A list of dependency references, each specifying the stack dependency ID, output name, and input name."
+  description = "List of stack dependency references"
   type = list(object({
-    stack_dependency_id = string
-    output_name         = string
-    input_name          = string
+    dependency_index = number
+    output_name      = string
+    input_name       = string
   }))
   default = []
 }
