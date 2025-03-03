@@ -42,7 +42,7 @@ variable "before_init" {
 variable "terraform_version" {
   type        = string
   description = "The version of terraform to use"
-  default     = "1.4.0"
+  default     = "1.8.7"
 }
 
 variable "administrative" {
@@ -78,13 +78,13 @@ variable "terraform_smart_sanitization" {
 variable "terraform_external_state_access" {
   type        = bool
   description = "Whether to allow external state access"
-  default     = true
+  default     = false
 }
 
 variable "manage_state" {
   type        = bool
   description = "Whether to manage state"
-  default     = true
+  default     = false
 }
 
 variable "labels" {
@@ -115,4 +115,17 @@ variable "azure_subscription_id" {
   type        = string
   description = "The id of the azure subscription"
   default     = null
+}
+
+variable "terraform_workflow_tool" {
+  type        = string
+  description = "The terraform workflow tool to use."
+  default     = "OPEN_TOFU"
+}
+
+variable "terraform_workspace" {
+  type        = string
+  description = "The terraform workspace to use."
+  default     = "production"
+
 }
