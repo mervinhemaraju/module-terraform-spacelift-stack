@@ -1,16 +1,14 @@
-# Create the stack dependencies
-resource "spacelift_stack_dependency" "this" {
-  for_each = var.stack_dependencies
-
+# Create stack dependencies dynamically
+resource "spacelift_stack_dependency" "dependencies" {
+  count               = length(var.dependencies)
   stack_id            = spacelift_stack.this.id
-  depends_on_stack_id = each.value
+  depends_on_stack_id = var.dependencies[count.index].depends_on_stack_id
 }
 
-# Create the dependency references
-resource "spacelift_stack_dependency_reference" "this" {
-  for_each = { for idx, ref in var.dependency_references : idx => ref }
-
-  stack_dependency_id = each.value.stack_dependency_id
-  output_name         = each.value.output_name
-  input_name          = each.value.input_name
+# Create dependency references dynamically
+resource "spacelift_stack_dependency_reference" "references" {
+  count               = length(var.dependency_references)
+  stack_dependency_id = spacelift_stack_dependency.dependencies[var.dependency_references[count.index].dependency_index].id
+  output_name         = var.dependency_references[count.index].output_name
+  input_name          = var.dependency_references[count.index].input_name
 }
