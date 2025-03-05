@@ -7,5 +7,5 @@ output "dependency_ids" {
 }
 
 output "gcp_sa_email" {
-  value = spacelift_gcp_service_account.this[*].email
+  value = spacelift_gcp_service_account.this[*].service_account_email
 }

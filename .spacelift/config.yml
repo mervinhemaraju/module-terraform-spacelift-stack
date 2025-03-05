@@ -13,3 +13,6 @@ tests:
   - name: Test with context attachments
     terraform_version: 1.4.6
     project_root: "examples/environment_variables"
+  - name: Test with gcp integration test
+    terraform_version: 1.4.6
+    project_root: "examples/gcp_integration"
