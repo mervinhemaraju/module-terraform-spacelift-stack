@@ -148,3 +148,9 @@ variable "dependency_references" {
   }))
   default = []
 }
+
+variable "create_gcp_integration" {
+  description = "Whether to create a GCP integration"
+  type        = bool
+  default     = false
+}
