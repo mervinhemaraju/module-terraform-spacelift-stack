@@ -1,5 +1,5 @@
 resource "spacelift_gcp_service_account" "this" {
-  count    = var.create_gcp_integration == null ? 0 : 1
+  count    = var.create_gcp_integration ? 1 : 0
   stack_id = spacelift_stack.this.id
 
   token_scopes = [
