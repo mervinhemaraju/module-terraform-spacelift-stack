@@ -154,3 +154,9 @@ variable "create_gcp_integration" {
   type        = bool
   default     = false
 }
+
+variable "additional_project_globs" {
+  description = "Project globs is an optional list of paths to track changes of in addition to the project root."
+  type        = list(string)
+  default     = []
+}

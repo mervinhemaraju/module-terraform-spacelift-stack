@@ -14,7 +14,8 @@ resource "spacelift_stack" "this" {
   autodeploy     = var.autodeploy
   autoretry      = var.autoretry
 
-  project_root = var.project_root
+  project_root             = var.project_root
+  additional_project_globs = var.additional_project_globs
 
   runner_image = var.runner_image
 

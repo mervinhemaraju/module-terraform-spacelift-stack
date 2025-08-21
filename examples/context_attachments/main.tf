@@ -17,7 +17,7 @@ module "stack_with_contexts" {
   source           = "../../"
   stack_repository = "mervinhemaraju"
   description      = "A simple test stack"
-  contexts = [
+  context_ids = [
     spacelift_context.one.id,
     spacelift_context.two.id,
   ]
