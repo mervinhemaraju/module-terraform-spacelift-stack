@@ -6,7 +6,7 @@ terraform {
     # Spacelift provider
     spacelift = {
       source  = "spacelift-io/spacelift"
-      version = "1.8.0"
+      version = "~> 1"
     }
   }
 }

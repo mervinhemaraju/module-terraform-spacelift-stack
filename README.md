@@ -7,13 +7,13 @@ A terraform module for Spacelift stacks
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4.0 |
-| <a name="requirement_spacelift"></a> [spacelift](#requirement\_spacelift) | 1.8.0 |
+| <a name="requirement_spacelift"></a> [spacelift](#requirement\_spacelift) | ~> 1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_spacelift"></a> [spacelift](#provider\_spacelift) | 1.8.0 |
+| <a name="provider_spacelift"></a> [spacelift](#provider\_spacelift) | ~> 1 |
 
 ## Modules
 
@@ -23,14 +23,14 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [spacelift_aws_integration_attachment.this](https://registry.terraform.io/providers/spacelift-io/spacelift/1.8.0/docs/resources/aws_integration_attachment) | resource |
-| [spacelift_azure_integration_attachment.this](https://registry.terraform.io/providers/spacelift-io/spacelift/1.8.0/docs/resources/azure_integration_attachment) | resource |
-| [spacelift_context_attachment.this](https://registry.terraform.io/providers/spacelift-io/spacelift/1.8.0/docs/resources/context_attachment) | resource |
-| [spacelift_environment_variable.this](https://registry.terraform.io/providers/spacelift-io/spacelift/1.8.0/docs/resources/environment_variable) | resource |
-| [spacelift_gcp_service_account.this](https://registry.terraform.io/providers/spacelift-io/spacelift/1.8.0/docs/resources/gcp_service_account) | resource |
-| [spacelift_stack.this](https://registry.terraform.io/providers/spacelift-io/spacelift/1.8.0/docs/resources/stack) | resource |
-| [spacelift_stack_dependency.dependencies](https://registry.terraform.io/providers/spacelift-io/spacelift/1.8.0/docs/resources/stack_dependency) | resource |
-| [spacelift_stack_dependency_reference.references](https://registry.terraform.io/providers/spacelift-io/spacelift/1.8.0/docs/resources/stack_dependency_reference) | resource |
+| [spacelift_aws_integration_attachment.this](https://registry.terraform.io/providers/spacelift-io/spacelift/latest/docs/resources/aws_integration_attachment) | resource |
+| [spacelift_azure_integration_attachment.this](https://registry.terraform.io/providers/spacelift-io/spacelift/latest/docs/resources/azure_integration_attachment) | resource |
+| [spacelift_context_attachment.this](https://registry.terraform.io/providers/spacelift-io/spacelift/latest/docs/resources/context_attachment) | resource |
+| [spacelift_environment_variable.this](https://registry.terraform.io/providers/spacelift-io/spacelift/latest/docs/resources/environment_variable) | resource |
+| [spacelift_gcp_service_account.this](https://registry.terraform.io/providers/spacelift-io/spacelift/latest/docs/resources/gcp_service_account) | resource |
+| [spacelift_stack.this](https://registry.terraform.io/providers/spacelift-io/spacelift/latest/docs/resources/stack) | resource |
+| [spacelift_stack_dependency.dependencies](https://registry.terraform.io/providers/spacelift-io/spacelift/latest/docs/resources/stack_dependency) | resource |
+| [spacelift_stack_dependency_reference.references](https://registry.terraform.io/providers/spacelift-io/spacelift/latest/docs/resources/stack_dependency_reference) | resource |
 
 ## Inputs
 
