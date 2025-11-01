@@ -1,8 +1,8 @@
 version: 1
-module_version: 1.4.5
+module_version: 1.4.6
 test_defaults:
   before_init: ["terraform fmt -check"]
-  runner_image: ghcr.io/mervinhemaraju/spacelift-runner-image:prod
+  runner_image: ghcr.io/mervinhemaraju/runner-image-spacelift:latest
 tests:
   - name: Test with simple configurations
     terraform_version: 1.4.6

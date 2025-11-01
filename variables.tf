@@ -66,7 +66,7 @@ variable "autoretry" {
 variable "runner_image" {
   type        = string
   description = "The runner image to use"
-  default     = "ghcr.io/mervinhemaraju/spacelift-runner-image:prod"
+  default     = "ghcr.io/mervinhemaraju/runner-image-spacelift:latest"
 }
 
 variable "terraform_smart_sanitization" {
